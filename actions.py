@@ -29,9 +29,9 @@ class MovementAction(Action):
         dest_y = entity.y + self.dy
 
         if not engine.game_map.in_bounds(dest_x, dest_y):
-            return  # Destination out of bounds
+            return  # Miejsce poza granicami mapy
         if not engine.game_map.tiles["walkable"][dest_x, dest_y]:
-            return  # Destination is blocked
+            return  # Miejsce zablokowane
 
         entity.move(self.dx, self.dy)
 

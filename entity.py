@@ -3,16 +3,16 @@ from typing import Tuple
 
 class Entity:
     """
-    Object representing players, enemies, items, etc.
+    Klasa reprezentująca wszysstkie jednostki. Graczy, npc, przeciwników itp.
     """
     def __init__(self, x: int, y: int, char: str, color: Tuple[int, int, int]):
         self.x = x
         self.y = y
-        self.char = char  # Visual representation of the entity
-        self.color = color  # Color of the entity
+        self.char = char  # Znak używany do reprezentacji postaci
+        self.color = color  # Kolor postaci
 
     def move(self, dx: int, dy: int) -> None:
-        #  Move entity by amount specified by dx and dy
+        #  przesuń jednostkę o dx i dy
         self.x += dx
         self.y += dy
 
